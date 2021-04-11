@@ -102,6 +102,7 @@ export default {
       },
     };
   },
+
   computed: {
     headBoederStyle() {
       return {
