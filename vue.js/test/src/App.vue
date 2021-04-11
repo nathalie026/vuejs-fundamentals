@@ -3,29 +3,27 @@
   <nav>
     <ul>
       <li class="nav-item">
+        <router-link class ="nav-link" :to="{name:'Home'}">
         <img class="logo" src="../src/assets/build-a-bot-logo.png">
         Build a bot
+        </router-link>
       </li>
     </ul>
   </nav>
 </header>
   <div id="app">
     <main>
-      <RobotBuilder />
+      <router-view/>
     </main>
   </div>
 </template>
 
 <script>
 // import HomePage from './components/home/HomePage.vue';
-import RobotBuilder from './build/RobotBuilder.vue';
+// import RobotBuilder from './build/RobotBuilder.vue';
 
 export default {
   name: 'App',
-  components: {
-    // HomePage,
-    RobotBuilder,
-  },
 };
 </script>
 <style>
@@ -65,5 +63,9 @@ ul {
 .logo {
   vertical-align: middle;
   height: 30px;
+}
+.nav-link{
+  text-decoration: none;
+  color: inherit;
 }
 </style>
