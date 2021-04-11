@@ -4,19 +4,34 @@
       Add to cart
     </button>
     <div class="top-row">
-      <PartSelector />
+      <PartSelector
+        :parts="avaibleParts.heads"
+        position= "top"
+        />
         <!-- <div class="robot-name">
           {{selectedRobot.head.title}}
           <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
       </div> -->
     </div>
     <div class="middle-row">
-        <PartSelector />
-        <PartSelector />
-        <PartSelector />
+        <PartSelector
+          :parts="avaibleParts.arms"
+          position= "left"
+        />
+        <PartSelector
+          :parts="avaibleParts.torsos"
+          position= "center"
+        />
+        <PartSelector
+          :parts="avaibleParts.arms"
+          position= "right"
+          />
     </div>
     <div class="bottom-row">
-      <PartSelector />
+      <PartSelector
+        :parts="avaibleParts.bases"
+        position= "bottom"
+        />
     </div>
     <div>
       <h1>Cart</h1>
