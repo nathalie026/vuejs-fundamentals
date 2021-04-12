@@ -8,17 +8,25 @@ import RobotArms from '../parts/RobotArms.vue';
 import RobotTorsos from '../parts/RobotTorsos.vue';
 import RobotHeads from '../parts/RobotHeads.vue';
 import RobotBases from '../parts/RobotBases.vue';
+import SidebarStandard from '../sidebar/SidebarStandard.vue';
+import SidebarBuilder from '../sidebar/SidebarBuilder.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomePage,
+    components: {
+      default: HomePage,
+      sidebar: SidebarStandard,
+    },
   },
   {
     path: '/build',
     name: 'Build',
-    component: RobotBuilder,
+    components: {
+      default: RobotBuilder,
+      sidebar: SidebarBuilder,
+    },
   },
   {
     path: '/parts/browse',
